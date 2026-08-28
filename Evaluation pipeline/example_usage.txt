@@ -1,0 +1,17 @@
+Kita model playoff
+
+conda activate bridge-eval
+python generate_evaluation.py --team1_npz numpy_models/model-pretrained-rl-with-fsp.npz --team2_npz numpy_models/model-sl.npz --output results/example.json --num_deals 1000
+python board_inspector.py results/example.json
+
+Transformer vs baseline
+
+conda activate bridge-eval
+python generate_evaluation.py --team1_pkl our_models/trf_model.pkl --team1_model_type Transformer --team1_name "Transformer" --team2_npz our_models/mlp_rl_baseline.npz --team2_name "Baseline" --output results/transformer.json
+python board_inspector.py results/transformer.json
+
+Warm starts
+
+conda activate bridge-eval
+python generate_evaluation.py --team1_pkl our_models/slws_transformer.pkl --team1_model_type Transformer --team1_name "Transformer" --team2_pkl our_models/slws_deepmind.pkl --team2_name "Baseline" --output results/warm_starts.json
+python board_inspector.py results/warm_starts.json
