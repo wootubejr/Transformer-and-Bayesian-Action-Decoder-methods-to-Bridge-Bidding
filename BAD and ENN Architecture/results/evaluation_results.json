@@ -1,0 +1,142 @@
+{
+  "num_deals": 2000,
+  "num_steps": 125027,
+  "seed": 42,
+  "enn_weights": "enn_weights.pt",
+  "plain_enn": {
+    "overall": {
+      "accuracy": 0.7765652142662423,
+      "recall": 0.5531303699939275,
+      "precision": 0.5531303699939275,
+      "cross_entropy": 0.34480390788313003,
+      "uncertainty": 0.346963691752273,
+      "avg_predicted": 13.0,
+      "n_steps": 125027
+    },
+    "by_bid_step": [
+      {
+        "accuracy": 0.738282477369532,
+        "recall": 0.47656490384615385,
+        "precision": 0.47656490384615385,
+        "cross_entropy": 0.39030736177237757,
+        "uncertainty": 0.4023598024869791,
+        "avg_predicted": 13.0,
+        "n_steps": 32000,
+        "bid_step_range": "0-15",
+        "bin": 1
+      },
+      {
+        "accuracy": 0.8528473864756525,
+        "recall": 0.7056947115384616,
+        "precision": 0.7056947115384616,
+        "cross_entropy": 0.23139342317805223,
+        "uncertainty": 0.23428870993844525,
+        "avg_predicted": 13.0,
+        "n_steps": 32000,
+        "bid_step_range": "15-30",
+        "bin": 2
+      },
+      {
+        "accuracy": 0.7906598855946213,
+        "recall": 0.5813197115384615,
+        "precision": 0.5813197115384615,
+        "cross_entropy": 0.32670143892622083,
+        "uncertainty": 0.33424300296470755,
+        "avg_predicted": 13.0,
+        "n_steps": 32000,
+        "bid_step_range": "30-45",
+        "bin": 3
+      },
+      {
+        "accuracy": 0.7382170157230635,
+        "recall": 0.47643397065362386,
+        "precision": 0.47643397065362386,
+        "cross_entropy": 0.4071563180796611,
+        "uncertainty": 0.3983470825580658,
+        "avg_predicted": 13.0,
+        "n_steps": 30794,
+        "bid_step_range": "45-60",
+        "bin": 4
+      },
+      {
+        "accuracy": 0.7189385930465976,
+        "recall": 0.43787712375761034,
+        "precision": 0.43787712375761034,
+        "cross_entropy": 0.451310822100272,
+        "uncertainty": 0.4150991502991013,
+        "avg_predicted": 13.0,
+        "n_steps": 5673,
+        "bid_step_range": "60-75",
+        "bin": 5
+      }
+    ]
+  },
+  "bad_enn": {
+    "overall": {
+      "accuracy": 0.6672023759087748,
+      "recall": 0.3344046916635238,
+      "precision": 0.3344046916635238,
+      "cross_entropy": 0.4780911074452463,
+      "uncertainty": 0.47807587246214367,
+      "avg_predicted": 13.0,
+      "n_steps": 125027
+    },
+    "by_bid_step": [
+      {
+        "accuracy": 0.6676935397218913,
+        "recall": 0.33538701923076925,
+        "precision": 0.33538701923076925,
+        "cross_entropy": 0.479384106202051,
+        "uncertainty": 0.4813468611780554,
+        "avg_predicted": 13.0,
+        "n_steps": 32000,
+        "bid_step_range": "0-15",
+        "bin": 1
+      },
+      {
+        "accuracy": 0.6668557992745191,
+        "recall": 0.33371153846153845,
+        "precision": 0.33371153846153845,
+        "cross_entropy": 0.477665901619941,
+        "uncertainty": 0.47695547915156933,
+        "avg_predicted": 13.0,
+        "n_steps": 32000,
+        "bid_step_range": "15-30",
+        "bin": 2
+      },
+      {
+        "accuracy": 0.6669820012170822,
+        "recall": 0.33396394230769233,
+        "precision": 0.33396394230769233,
+        "cross_entropy": 0.4776606028312817,
+        "uncertainty": 0.4769556525535881,
+        "avg_predicted": 13.0,
+        "n_steps": 32000,
+        "bid_step_range": "30-45",
+        "bin": 3
+      },
+      {
+        "accuracy": 0.6670293214898407,
+        "recall": 0.33405858284081313,
+        "precision": 0.33405858284081313,
+        "cross_entropy": 0.4776528782050408,
+        "uncertainty": 0.47695054421720934,
+        "avg_predicted": 13.0,
+        "n_steps": 30794,
+        "bid_step_range": "45-60",
+        "bin": 4
+      },
+      {
+        "accuracy": 0.6683345156835538,
+        "recall": 0.3366689717826683,
+        "precision": 0.3366689717826683,
+        "cross_entropy": 0.4774946509982761,
+        "uncertainty": 0.4768896966978248,
+        "avg_predicted": 13.0,
+        "n_steps": 5673,
+        "bid_step_range": "60-75",
+        "bin": 5
+      }
+    ]
+  }
+}
