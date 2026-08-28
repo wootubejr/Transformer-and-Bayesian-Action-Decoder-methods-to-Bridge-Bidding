@@ -1,0 +1,48 @@
+# ============================================================
+# Bridge Bidding Evaluation — Windows-native CPU environment
+# ============================================================
+# Purpose: run generate_evaluation.py + board_inspector.py
+# Drops:   open-spiel (no Windows wheels) and CUDA JAX (Linux-only)
+# Keeps:   pinned dm-haiku/pgx/distrax for .pkl compatibility
+#
+# Create with:
+#   conda env create -f environment-win-cpu.yml
+#   conda activate bridge-eval
+#   pip install jax==0.4.35 jaxlib==0.4.35   # CPU-only; do AFTER env exists
+# ============================================================
+
+name: bridge-eval
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - pip
+  - setuptools=69.5.1
+
+  - pip:
+      # Core ML stack (jax/jaxlib installed separately in step 2 above)
+      - dm-haiku==0.0.16
+      - optax==0.2.4
+      - distrax==0.1.5
+      - chex==0.1.88
+
+      # Bridge environment
+      - pgx==2.4.0
+
+      # Config & validation (kept from brl requirements; harmless)
+      - omegaconf==2.3.0
+      - pydantic==2.5.3
+
+      # Numerical (jax 0.4.x requires numpy<2)
+      - numpy==1.26.3
+
+      # Logging
+      - wandb==0.16.1
+
+      # Utilities
+      - absl-py==2.0.0
+      - dm-tree==0.1.8
+      - toolz==0.12.0
+
